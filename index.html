@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+    <title>Tugas Penerapan Javascript</title>
+</head>
+  <h1>Tugas Penerapan JavaScript</h1>
+<body>
+  <p id="result"></p>
+    <script>
+        result += "<h1>if else statement</h1>";
+     const monthInIslam = 12;
+    if (monthInIslam >= 9) {
+      result += "your choose is syawal.";
+   } else {
+     result +="your choose is syakban.";
+  }
+
+    result += "<h1>nested if</h1>";
+    let price = (90000);{
+    let result ='';
+   }if (price >= 60000 ){
+       result+="you get discount 15%.";
+      } if (price >= 30000 && price < 60000 ){
+         result+="you get discount 30%.";
+     } else {
+      result += "<br>you dont have discount.";
+     }
+
+     result += "<h1>switch case</h1>";
+    let skillLevel = "Intermediate";
+
+    switch (skillLevel) {
+    case "Beginner":
+        result+="You are at a Beginner level.";
+        break;
+    case "Intermediate":
+        result+="You are at an Intermediate level.";
+        break;
+    case "Advanced":
+        result +="You are at an Advanced level.";
+        break;
+    default:
+        result +="Skill level not recognized.";
+}
+
+    result += "<h1>for statement</h1>";
+    const MinangkabauSuku = 3;
+    for (let i = 1; i <=MinangkabauSuku; i++){
+
+   result += "<br>piliang dan caniago";
+ }
+
+ result += "<h1>while statement</h1>";
+ let count = -15;
+
+ while (count <= 15) {
+     result +=(`<br>Count: ${count}`);
+     count++;
+ }
+
+  result += "<h1>do while statement</h1>";
+   x = 0.1;
+        do {
+           result += `<br>${x}`;
+            x++;
+        } while (x <= 5);
+
+result += "<h1>function</h1>";
+  function StatusDutaKampus(nilaiAkademis, aktivitasSosial, wawancara) {
+  
+  if (nilaiAkademis >= 80 && aktivitasSosial >= 75 && wawancara === "baik") {
+      return "Rani berhasil meraih gelar Duta Kampus!";
+  } else {
+      return "Rani belum memenuhi kriteria untuk menjadi Duta Kampus.";
+  }
+}
+  var nilaiAkademisRani = 85;
+  var aktivitasSosialRani = 80;
+  var hasilWawancaraRani = "baik";
+
+  var statusDutaKampusRani = StatusDutaKampus(nilaiAkademisRani, aktivitasSosialRani, hasilWawancaraRani);
+result +=(statusDutaKampusRani);
+//Menampilkan hasil ke dalam elemen p dengan id "result"
+        document.getElementById("result").innerHTML = result;
+</script>
+</body>
+</html>
